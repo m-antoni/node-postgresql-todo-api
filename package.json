@@ -1,0 +1,27 @@
+{
+  "name": "pern-todo",
+  "version": "1.0.0",
+  "description": "Sample Pern Todo app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "db:model": "npx sequelize-cli model:generate --name todo --attributes title:string,content:string",
+    "db:migrate": "npx sequelize-cli db:migrate",
+    "db:migrate-undo": "npx sequelize-cli db:migrate:undo",
+    "db:seed": "npx sequelize-cli seed:generate --name demo-todos",
+    "dev": "nodemon index"
+  },
+  "author": "Michael Antoni",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "faker": "^5.5.3",
+    "pg": "^8.5.1",
+    "sequelize": "^6.6.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7",
+    "sequelize-cli": "^6.2.0"
+  }
+}
